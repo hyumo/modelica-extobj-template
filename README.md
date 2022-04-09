@@ -26,11 +26,22 @@ Cookiecutter is a command-line utility that creates projects from cookiecutters 
 
 For detailed cookiecutter installation for your system, please check out cookiecutter [installation documentation](https://cookiecutter.readthedocs.io/en/latest/installation.html).
 
-if you have pip, just do this:
+if you have pip on linux, just do this for your python environment:
 ```
-python3 -m pip install --user cookiecutter
+pip install cookiecutter
 ```
 
 ## Create Project
 
+To generate the project:
+```
+cookiecutter gh:hyumo/modelica-extobj-template
+```
+
+After you give the project a proper name, to test if the project is created correctly:
+```
+cd <PROJECT_NAME>
+make
+```
+You should see `<PROJECT_NAME>_ctor` and `<PROJECT_NAME>_dtor` dummy test cases `PASSED`
 
