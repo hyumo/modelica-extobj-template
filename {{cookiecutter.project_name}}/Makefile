@@ -25,7 +25,7 @@ PATHU = tests/unity/
 TARGET = test_{{cookiecutter.project_name}}
 
 SRC = $(wildcard $(PATHS)*.c)
-SRC = $(wildcard $(PATHT)*.c)
+SRC += $(wildcard $(PATHT)*.c)
 SRC += $(wildcard $(PATHU)*.c)
 
 INCLUDES = -Isrc -I$(PATHU)
