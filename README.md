@@ -43,5 +43,14 @@ After you give the project a proper name, to test if the project is created corr
 cd <PROJECT_NAME>
 make
 ```
-You should see `<PROJECT_NAME>_ctor` and `<PROJECT_NAME>_dtor` dummy test cases `PASSED`
 
+You should see two dummy testcases PASSED:
+```
+...
+tests/Test_mojson.c:20:test_<PROJECT_NAME>_ctor:PASS
+tests/Test_mojson.c:21:test_<PROJECT_NAME>_dtor:PASS
+
+-----------------------
+2 Tests 0 Failures 0 Ignored 
+OK
+```
