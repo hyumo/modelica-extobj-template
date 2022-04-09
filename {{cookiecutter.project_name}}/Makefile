@@ -18,15 +18,17 @@ CFLAGS += -Wstrict-prototypes
 CFLAGS += -Wundef
 CFLAGS += -Wold-style-definition
 
+PATHS = src/
 PATHT = tests/
 PATHU = tests/unity/
 
 TARGET = test_{{cookiecutter.project_name}}
 
+SRC = $(wildcard $(PATHS)*.c)
 SRC = $(wildcard $(PATHT)*.c)
 SRC += $(wildcard $(PATHU)*.c)
 
-INCLUDES = -Iinclude -I$(PATHU)
+INCLUDES = -Isrc -I$(PATHU)
 
 .PHONY: clean
 .PHONY: test
