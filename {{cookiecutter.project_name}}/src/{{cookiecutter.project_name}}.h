@@ -3,6 +3,14 @@
 
 #include <stdlib.h>
 
+#if !defined(MODELICA_EXPORT)
+#if defined(__cplusplus)
+#define MODELICA_EXPORT extern "C"
+#else
+#define MODELICA_EXPORT
+#endif
+#endif
+
 /* Make sure to define NDEBUG when doing a release */
 #ifdef NDEBUG
     #define HAS_MODELICA_UTILITIES
@@ -32,7 +40,7 @@ typedef struct {{cookiecutter.project_name}}
     int dummy;
 }{{cookiecutter.project_name}}_s;
 
-void* {{cookiecutter.project_name}}_init(void) {
+MODELICA_EXPORT void* {{cookiecutter.project_name}}_init(void) {
     /*
         Init variables here
     */
@@ -50,7 +58,7 @@ void* {{cookiecutter.project_name}}_init(void) {
  * @brief {{cookiecutter.project_name}} destructor
  * 
  */
-void {{cookiecutter.project_name}}_close(void* _obj_ID) {
+MODELICA_EXPORT void {{cookiecutter.project_name}}_close(void* _obj_ID) {
     {{cookiecutter.project_name}}_s *obj_ID = ({{cookiecutter.project_name}}_s*)_obj_ID;
     if (NULL == obj_ID) {
         return;
