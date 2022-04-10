@@ -20,6 +20,8 @@
     #include "ModelicaUtilities.h"
     #define LOG_FORMAT_INFO(format, ...)   do { ModelicaFormatMessage(format, __VA_ARGS__); } while(0)
     #define LOG_FORMAT_ERROR(format, ...)  do { ModelicaFormatError("[%s, L%d] ERROR: " format, __FILE__, __LINE__, __VA_ARGS__); } while(0) 
+    #define LOG_INFO(format)               do { ModelicaMessage(format); } while(0)
+    #define LOG_ERROR(format)              do { ModelicaFormatError("[%s, L%d] ERROR: " format, __FUNCTION__, __LINE__); } while(0)
 #else
     #include <stdio.h>
     #define LOG_FORMAT_INFO(format, ...)   do { fprintf(stdout, "[%s, L%d] INFO: " format, __FUNCTION__, __LINE__, __VA_ARGS__); } while(0)

@@ -9,16 +9,12 @@ void setUp(void) {
 void tearDown(void) {
 }
 
-void test_{{cookiecutter.project_name}}_ctor(void) {
-}
-
-void test_{{cookiecutter.project_name}}_dtor(void) {
+void test_dummy(void){
 }
 
 int main(void) {
     UNITY_BEGIN();
-    RUN_TEST(test_{{cookiecutter.project_name}}_ctor);
-    RUN_TEST(test_{{cookiecutter.project_name}}_dtor);
+    RUN_TEST(test_dummy);
     return UNITY_END();
 }
 

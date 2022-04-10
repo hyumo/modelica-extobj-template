@@ -44,13 +44,12 @@ cd <PROJECT_NAME>
 make
 ```
 
-You should see two dummy testcases PASSED:
+You should see a dummy testcase PASSED:
 ```
 ...
-tests/Test_<PROJECT_NAME>.c:20:test_<PROJECT_NAME>_ctor:PASS
-tests/Test_<PROJECT_NAME>.c:21:test_<PROJECT_NAME>_dtor:PASS
+tests/test_{{cookiecutter.project_name}}.c:17:test_dummy:PASS
 
 -----------------------
-2 Tests 0 Failures 0 Ignored 
+1 Tests 0 Failures 0 Ignored 
 OK
 ```
